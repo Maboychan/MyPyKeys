@@ -95,7 +95,7 @@ def main():
         selected = dialogs.list_dialog(f'{SCRIPT_NAME_STEM.upper()} PASTER', all_items)
     except Exception as e:
         clipboard.set(str(e))
-        dialogs.hud_alert(f'⚠️ error', duration=10)#####
+        dialogs.hud_alert(f'⚠️ error', duration=2)#####
         #dialogs.hud_alert(f'🏁Check_1', duration=10)#####
 
     if selected:

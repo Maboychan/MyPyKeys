@@ -1,0 +1,24 @@
+# .gitignore
+
+# --- NexusBridge: Clips Specific ---
+# 履歴ファイル（万が一リポジトリ内に生成された場合の保険）
+Clips.json
+*.json
+
+# --- Python ---
+# 実行時に生成されるキャッシュファイル
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- iOS / macOS ---
+# OSが自動生成する隠しファイル
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- IDE / Editor ---
+# エディタ固有の設定ファイル
+.vscode/
+.idea/
