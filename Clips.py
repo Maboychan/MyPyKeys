@@ -1,6 +1,7 @@
 # dev/my-pykeys-scripts/Clips.py
 '''Clips_v2_1_4
 【Clips : Modular Edition】
+2026-03-16 00:17 コメント追加（この行）
 2026-03-14 07:42 履歴ファイルの保存場所をローカルに変更。
 20260311_152535 📋 COPY CURSOR LINE を追加。
 司令塔(本体)と魔法書(Macro)を分離した、拡張型エクスパンダー。
