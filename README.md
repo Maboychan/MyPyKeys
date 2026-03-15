@@ -31,12 +31,11 @@ Pythonista 3/
 │   └── Clips_Macro.py  # 魔法書 (マクロ定義)
 └── [Local Documents]/
     └── Clips.json      # 履歴データ (自動生成)
+```
 
 ## 🚀 How to Use
-Pythonista の PyKeys 設定から Clips.py を登録。
-
-キーボードから Clips を起動し、リストからアクションを選択。
-
-マクロを追加したい場合は、Clips_Macro.py の ACTIONS リストに関数を追記するだけ。
+* Pythonista の PyKeys 設定から Clips.py を登録。
+* キーボードから Clips を起動し、リストからアクションを選択。
+* マクロを追加したい場合は、Clips_Macro.py の ACTIONS リストに関数を追記するだけ。
 
 NexusBridge Project - Transforming iPad into a powerful development workstation.
