@@ -108,12 +108,12 @@ def get_macros(base_dir):
     def copy_cursor_line_macro():
         cursor_line = ''.join([x if x else '' for x in keyboard.get_input_context()])
         clipboard.set(cursor_line)
-        return "\u202d" + 'Cursor line copied!'
+        return "\u202d" + 'Cursor line Copied!'
     
     def copy_selection_macro():
         text = keyboard.get_selected_text()
-        
-        pass
+        clipboard.set(text)
+        return "\u202d" + 'Selection Copied!'
 
   
 
@@ -125,6 +125,7 @@ def get_macros(base_dir):
         {'title': '📂 CLIP FILE', 'action': import_file_macro},
         {'title': '☁️🌳 ICLOUD TREE (Paste)', 'action': update_tree_macro},
         {'title': '📋 COPY CURSOR LINE', 'action': copy_cursor_line_macro},
+        {'title': '📋 COPY SELECTIONS', 'action': copy_selection_macro},
     ]
 
     return ALIASES, ACTIONS

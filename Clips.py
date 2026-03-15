@@ -11,6 +11,7 @@
 📂 CLIP FILE            # ファイルを選択してクリップボードへコピー
 ☁️🌳 ICLOUD TREE (Paste)# ファイルツリー
 📋 COPY CURSOR LINE     # カーソル行をコピー
+📋 COPY SELECTIONS      # 選択範囲をコピー
 
 📅 TIMESTAMP            # 2026-03-11 13:27
 ✂ CLEAR CLIPBOADD️      # クリップボードをクリア
@@ -130,6 +131,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-'''
-dialogs.hud_alert('🏁CheckPoint_1', duration=2)#####
-'''
