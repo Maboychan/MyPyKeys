@@ -26,7 +26,7 @@ NexusBridge の一環として開発された **Clips** は、単なるクリッ
 ## 📂 File Structure
 ```text
 Pythonista 3/
-├── dev/my-pykeys-scripts/
+├── dev/MyPyKeys/       # 任意の場所
 │   ├── Clips.py        # 司令塔 (本体)
 │   └── Clips_Macro.py  # 魔法書 (マクロ定義)
 └── [Local Documents]/

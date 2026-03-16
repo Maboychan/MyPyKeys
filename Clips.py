@@ -15,7 +15,7 @@
 📋 COPY SELECTIONS      # 選択範囲をコピー
 
 📅 TIMESTAMP            # 2026-03-11 13:27
-✂ CLEAR CLIPBOADD️      # クリップボードをクリア
+✂️ CLEAR CLIPBOADD️      # クリップボードをクリア
 💣 DELEART HISTORY      # 履歴を削除‭
 '''
 import keyboard, dialogs, clipboard, json, os, datetime
