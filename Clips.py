@@ -1,23 +1,3 @@
-# dev/my-pykeys-scripts/Clips.py
-'''Clips_v2_1_4
-【Clips : Modular Edition】
-2026-03-16 00:17 コメント追加（この行）
-2026-03-14 07:42 履歴ファイルの保存場所をローカルに変更。
-20260311_152535 📋 COPY CURSOR LINE を追加。
-司令塔(本体)と魔法書(Macro)を分離した、拡張型エクスパンダー。
-
-⌚️ 20260311_143421      # タイムスタンプ
-💾️ CLIP SAVE (#)        # クリップボードの内容をファイルに保存
-📝 CLIP APPEND (++)     # クリップボードの内容をファイルに追記
-📂 CLIP FILE            # ファイルを選択してクリップボードへコピー
-☁️🌳 ICLOUD TREE (Paste)# ファイルツリー
-📋 COPY CURSOR LINE     # カーソル行をコピー
-📋 COPY SELECTIONS      # 選択範囲をコピー
-
-📅 TIMESTAMP            # 2026-03-11 13:27
-✂️ CLEAR CLIPBOADD️      # クリップボードをクリア
-💣 DELEART HISTORY      # 履歴を削除‭
-'''
 import keyboard, dialogs, clipboard, json, os, datetime
 
 # --- 1. 自律検知ユニット ---
@@ -27,7 +7,7 @@ LOCAL_DOCS = os.path.expanduser('~/Documents')
 SCRIPT_NAME_STEM = os.path.splitext(os.path.basename(CURRENT_FILE_PATH))[0]
 HISTORY_FILE = os.path.join(LOCAL_DOCS, f"{SCRIPT_NAME_STEM}.json")
 
-MAX_HISTORY = 10
+MAX_HISTORY = 20
 
 # --- 2. 魔法書(Macro)の動的ロード ---
 DYNAMIC_ALIASES = {}
@@ -64,7 +44,7 @@ def save_history(history):
 def add_to_history(text):
     if not text or not text.strip() or text in DYNAMIC_ALIASES: return
     history = load_history()
-    title = (text.split('\n')[0][:15] + '...') if len(text) > 15 else text.split('\n')[0]
+    title = (text.split('\n')[0][:30] + '...') if len(text) > 30 else text.split('\n')[0]
     history.insert(0, {'title': f'🕒 {title}', 'value': text})
     save_history(history)
 

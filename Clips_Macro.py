@@ -1,11 +1,3 @@
-# dev/my-pykeys-scripts/Clips_Macro.py
-
-'''
-【Clips : Modular Edition】
-2026-03-14 07:57 戻り値の先頭に"\u202d"を付け戻り値をクリップボードに入れないようにする。
-2026-03-16 00:16 コメント追加（この行）
-20260311_152603 📋 COPY CURSOR LINE を追加
-'''
 import clipboard, datetime, dialogs, keyboard, os
 
 
