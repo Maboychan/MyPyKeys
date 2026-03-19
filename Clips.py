@@ -1,11 +1,12 @@
 import keyboard, dialogs, clipboard, json, os, datetime
+from pathlib import Path
 
 # --- 1. 自律検知ユニット ---
-CURRENT_FILE_PATH = os.path.abspath(__file__)
-BASE_DIR = os.path.dirname(CURRENT_FILE_PATH)
-LOCAL_DOCS = os.path.expanduser('~/Documents')
-SCRIPT_NAME_STEM = os.path.splitext(os.path.basename(CURRENT_FILE_PATH))[0]
-HISTORY_FILE = os.path.join(LOCAL_DOCS, f"{SCRIPT_NAME_STEM}.json")
+CURRENT_FILE_PATH: Path = Path(__file__)
+BASE_DIR: Path = CURRENT_FILE_PATH.parent
+LOCAL_DOCS: Path = Path.home() / "Documents"
+SCRIPT_NAME_STEM: Path = CURRENT_FILE_PATH.stem
+HISTORY_FILE: Path = (LOCAL_DOCS / SCRIPT_NAME_STEM).with_suffix(".json")
 
 MAX_HISTORY = 20
 
@@ -57,7 +58,7 @@ def main():
     if input_text in DYNAMIC_ALIASES:
         expanded = DYNAMIC_ALIASES[input_text]()
         alias_item = [{'title': f'✨ ALIAS: {input_text} -> {expanded[:10]}...', 'value': expanded}]
-
+    
     add_to_history(input_text)
     history = load_history()
 
@@ -76,8 +77,7 @@ def main():
         selected = dialogs.list_dialog(f'{SCRIPT_NAME_STEM.upper()} PASTER', all_items)
     except Exception as e:
         clipboard.set(str(e))
-        dialogs.hud_alert(f'⚠️ error', duration=2)#####
-        #dialogs.hud_alert(f'🏁Check_1', duration=10)#####
+        dialogs.hud_alert(f'⚠️ error', duration=2)
 
     if selected:
         keyboard.play_input_click()
@@ -106,7 +106,6 @@ def main():
                 dialogs.hud_alert(final_val[1:], duration=0.5)
             else:
                 add_to_history(final_val)
-                #dialogs.hud_alert(final_val, duration=0.5)
                 dialogs.hud_alert(final_val[:15] + "...", duration=0.5)
                 clipboard.set(final_val)
 

@@ -5,6 +5,11 @@
 Clips.json
 *.json
 
+# --- Local Test Files ---
+test.py
+test*.py
+*test.py
+
 # --- Python ---
 # 実行時に生成されるキャッシュファイル
 __pycache__/
